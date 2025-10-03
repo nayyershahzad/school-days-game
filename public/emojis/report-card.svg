@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Report card/progress card -->
+  <rect x="16" y="12" width="32" height="42" rx="1" fill="#FFFFFF" stroke="#A9A9A9" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="16" y="12" width="32" height="8" fill="#4169E1" opacity="0.3"/>
+  <text x="22" y="18" font-family="Arial" font-size="4" font-weight="bold" fill="#333">REPORT CARD</text>
+  <!-- Student name line -->
+  <line x1="20" y1="25" x2="44" y2="25" stroke="#000" stroke-width="0.5"/>
+  <text x="20" y="24" font-family="Arial" font-size="3" fill="#666">Name: ___________</text>
+  <!-- Grades -->
+  <text x="20" y="32" font-family="Arial" font-size="3.5" fill="#333">Math:</text>
+  <text x="38" y="32" font-family="Arial" font-size="4" font-weight="bold" fill="#228B22">A</text>
+  <text x="20" y="38" font-family="Arial" font-size="3.5" fill="#333">English:</text>
+  <text x="38" y="38" font-family="Arial" font-size="4" font-weight="bold" fill="#228B22">B+</text>
+  <text x="20" y="44" font-family="Arial" font-size="3.5" fill="#333">Science:</text>
+  <text x="38" y="44" font-family="Arial" font-size="4" font-weight="bold" fill="#FFD700">B</text>
+  <!-- Stamp/seal -->
+  <circle cx="38" cy="48" r="4" fill="none" stroke="#DC143C" stroke-width="1.2" opacity="0.5"/>
+  <text x="35" y="49" font-family="Arial" font-size="2.5" fill="#DC143C" opacity="0.5">PASS</text>
+  <!-- Fold mark -->
+  <line x1="16" y1="33" x2="48" y2="33" stroke="#D3D3D3" stroke-width="0.5" opacity="0.3"/>
+  <!-- Coffee stain -->
+  <circle cx="25" cy="48" r="2.5" fill="#8B4513" opacity="0.1"/>
+</svg>

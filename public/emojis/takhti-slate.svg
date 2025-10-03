@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Authentic Takhti (Wooden Slate with Clay Coating) -->
+  <!-- Wooden board base -->
+  <rect x="14" y="16" width="36" height="38" rx="1" fill="#654321" stroke="#3E2723" stroke-width="2"/>
+  <!-- Clay coating (Multani mitti) - slightly cracked and worn -->
+  <rect x="16" y="18" width="32" height="34" fill="#DAA520" opacity="0.7"/>
+  <rect x="17" y="19" width="30" height="32" fill="#D2B48C"/>
+  <!-- Ink writing in Urdu style (simulated calligraphy) -->
+  <path d="M22 26 Q28 24 32 26 Q36 28 40 26" stroke="#000080" stroke-width="1.5" fill="none"/>
+  <path d="M24 32 L38 32" stroke="#000080" stroke-width="1.2"/>
+  <circle cx="39" cy="32" r="1.5" fill="#000080"/>
+  <path d="M26 38 Q30 36 34 38" stroke="#000080" stroke-width="1.3" fill="none"/>
+  <path d="M22 44 L36 44" stroke="#000080" stroke-width="1.1"/>
+  <path d="M28 44 Q30 46 32 44" stroke="#000080" stroke-width="0.8" fill="none"/>
+  <!-- Wood grain on edges -->
+  <line x1="14" y1="20" x2="14" y2="52" stroke="#3E2723" stroke-width="0.6" opacity="0.5"/>
+  <line x1="50" y1="20" x2="50" y2="52" stroke="#3E2723" stroke-width="0.6" opacity="0.5"/>
+  <!-- Worn edges and cracks in clay -->
+  <path d="M20 22 L22 24" stroke="#A0826D" stroke-width="0.8" opacity="0.5"/>
+  <path d="M44 48 L46 50" stroke="#A0826D" stroke-width="0.8" opacity="0.5"/>
+  <path d="M30 25 Q31 30 30 35" stroke="#B8860B" stroke-width="0.5" opacity="0.3"/>
+  <!-- Ink stains -->
+  <circle cx="42" cy="24" r="1.5" fill="#000080" opacity="0.3"/>
+  <circle cx="25" cy="48" r="1" fill="#000080" opacity="0.2"/>
+  <!-- String hole at top (for hanging) -->
+  <circle cx="32" cy="19" r="1.2" fill="#3E2723" stroke="#000" stroke-width="0.5"/>
+  <!-- Shadow -->
+  <rect x="15" y="54" width="34" height="1" fill="#000" opacity="0.2"/>
+</svg>

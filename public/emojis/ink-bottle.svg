@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Old ink bottle -->
+  <ellipse cx="32" cy="54" rx="12" ry="3" fill="#000" opacity="0.2"/>
+  <!-- Bottle body -->
+  <path d="M22 35 L20 50 Q20 54 32 54 Q44 54 44 50 L42 35 Z" fill="#191970" stroke="#000080" stroke-width="1.5"/>
+  <!-- Ink inside -->
+  <ellipse cx="32" cy="45" rx="9" ry="2" fill="#000080" opacity="0.6"/>
+  <!-- Neck -->
+  <rect x="28" y="25" width="8" height="12" fill="#191970" stroke="#000080" stroke-width="1.5"/>
+  <ellipse cx="32" cy="25" rx="4" ry="2" fill="#000080" stroke="#000080" stroke-width="1"/>
+  <!-- Cork/cap -->
+  <rect x="30" y="20" width="4" height="6" rx="1" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <ellipse cx="32" cy="20" rx="2.5" ry="1.5" fill="#A0826D" stroke="#8B4513" stroke-width="0.8"/>
+  <!-- Label (old, faded) -->
+  <rect x="26" y="38" width="12" height="8" fill="#F5F5DC" opacity="0.6" stroke="#D3D3D3" stroke-width="0.5"/>
+  <text x="28" y="43" font-family="Arial" font-size="3" fill="#333">INK</text>
+  <!-- Ink stains on bottle -->
+  <circle cx="25" cy="42" r="1" fill="#000080" opacity="0.5"/>
+  <circle cx="39" cy="48" r="0.8" fill="#000080" opacity="0.5"/>
+</svg>

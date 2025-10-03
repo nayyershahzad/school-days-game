@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Old metal bucket with dents -->
+  <ellipse cx="32" cy="56" rx="16" ry="4" fill="#333" opacity="0.2"/>
+  <path d="M18 25 L15 50 Q15 55 32 55 Q49 55 49 50 L46 25 Z" fill="#A9A9A9" stroke="#696969" stroke-width="1.5"/>
+  <!-- Dents and scratches -->
+  <path d="M20 30 Q22 32 20 34" stroke="#555" stroke-width="1" fill="none"/>
+  <path d="M42 40 Q44 42 42 44" stroke="#555" stroke-width="1" fill="none"/>
+  <line x1="25" y1="35" x2="27" y2="37" stroke="#555" stroke-width="0.8"/>
+  <!-- Rim -->
+  <ellipse cx="32" cy="25" rx="14" ry="3.5" fill="#808080" stroke="#555" stroke-width="1.5"/>
+  <!-- Handle -->
+  <path d="M20 23 Q32 10 44 23" stroke="#696969" stroke-width="2" fill="none"/>
+  <!-- Rust spots -->
+  <circle cx="23" cy="45" r="2" fill="#CD5C5C" opacity="0.4"/>
+  <circle cx="40" cy="38" r="1.5" fill="#CD5C5C" opacity="0.4"/>
+  <!-- Water inside -->
+  <ellipse cx="32" cy="48" rx="11" ry="2" fill="#4682B4" opacity="0.6"/>
+</svg>

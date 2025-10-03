@@ -1,5 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { Plus, RefreshCw, Sparkles } from 'lucide-react';
+
+// Emoji image mapping - 90's Sub-continent School Theme (ALL SVG for perfect fit!)
+const emojiImages = {
+  // Water chain - from dirty to clean
+  '💧': '/emojis/clay-pot.svg',           // Old clay pot
+  '🚰': '/emojis/hand-pump.svg',          // Hand pump
+  '🧴': '/emojis/metal-bucket.svg',       // Metal bucket
+  '🍶': '/emojis/metal-glass.svg',        // Metal glass
+  '⛲': '/emojis/water-tank.svg',         // Water tank
+  // Education chain - from torn to certificate
+  '📄': '/emojis/torn-notebook.svg',      // Torn notebook
+  '📖': '/emojis/old-newspaper.svg',      // Old newspaper
+  '📓': '/emojis/notebook.svg',           // Notebook
+  '📚': '/emojis/books.svg',              // Books
+  '🎓': '/emojis/report-card.svg',        // Report card
+  // Resilience chain - emotions
+  '😢': '/emojis/crying.svg',
+  '😐': '/emojis/neutral.svg',
+  '😊': '/emojis/smiling.svg',
+  '💪': '/emojis/muscle.svg',
+  '👑': '/emojis/crown.svg',
+  // Classroom chain - from broken to clean
+  '🪑': '/emojis/broken-bench.svg',       // Broken bench
+  '🛠️': '/emojis/tools.svg',             // Tools
+  '✨': '/emojis/wooden-desk.svg',        // Wooden desk
+  '📐': '/emojis/blackboard.svg',         // Blackboard
+  '🏛️': '/emojis/bank.svg',              // School building
+  // Homework chain
+  '❓': '/emojis/takhti-slate.svg',       // Takhti (wooden slate)
+  '✏️': '/emojis/chalk-piece.svg',       // Chalk
+  '🖊️': '/emojis/ink-bottle.svg',        // Ink bottle
+  '📝': '/emojis/memo.svg',               // Completed work
+  '⭐': '/emojis/star.svg',               // Star
+  // Friends chain
+  '👋': '/emojis/wave.svg',
+  '🤝': '/emojis/tiffin-box.svg',         // Sharing tiffin
+  '👥': '/emojis/people.svg',
+  '🎉': '/emojis/party.svg',
+  '💖': '/emojis/heart.svg',
+  // Hygiene chain
+  '🧹': '/emojis/dirty-floor.svg',        // Dirty floor
+  '🚿': '/emojis/shower.svg',
+  '🧼': '/emojis/soap.svg',
+  '🚽': '/emojis/toilet.svg',
+  '🏥': '/emojis/hospital.svg',
+  // Supplies chain
+  '📎': '/emojis/paperclip.svg',
+  '✂️': '/emojis/scissors.svg',
+  '🖍️': '/emojis/crayon.svg',
+  '🎨': '/emojis/art.svg',
+  '🔬': '/emojis/cane-stick.svg',         // Punishment cane
+};
+
+// Optimized Component to render emoji as image (memoized to prevent re-renders)
+const EmojiIcon = memo(({ emoji, size = "w-10 h-10" }) => {
+  const src = emojiImages[emoji];
+  if (!src) return <span>{emoji}</span>;
+
+  return (
+    <img
+      src={src}
+      alt={emoji}
+      className={`inline-block ${size} transition-opacity duration-150`}
+      loading="lazy"
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.parentNode.innerHTML = emoji;
+      }}
+    />
+  );
+});
 
 const App = () => {
   // Game state
@@ -27,16 +98,16 @@ const App = () => {
     supplies: ['📎', '✂️', '🖍️', '🎨', '🔬']
   };
 
-  // Item names for display
+  // Item names for display - 90's Sub-continent School Theme
   const itemNames = {
-    '💧': 'Dirty Puddle', '🚰': 'Tap Water', '🧴': 'Filter Bottle', '🍶': 'Clean Water', '⛲': 'Water Cooler',
-    '📄': 'Torn Page', '📖': 'Old Book', '📓': 'New Notebook', '📚': 'Study Guide', '🎓': 'Certificate',
-    '😢': 'Tears', '😐': 'Courage', '😊': 'Friends', '💪': 'Voice', '👑': 'Leadership',
-    '🪑': 'Broken Desk', '🛠️': 'Fixed Desk', '✨': 'Clean Desk', '📐': 'Study Table', '🏛️': 'Library Corner',
-    '❓': 'Blank Page', '✏️': 'Pencil Draft', '🖊️': 'Inked Work', '📝': 'Complete Homework', '⭐': 'Perfect Assignment',
-    '👋': 'Wave Hello', '🤝': 'Ask for Help', '👥': 'Study Buddy', '🎉': 'Best Friends', '💖': 'Forever Friends',
-    '🧹': 'Dirty Floor', '🚿': 'Water Bucket', '🧼': 'Soap Bar', '🚽': 'Clean Toilet', '🏥': 'Modern Facilities',
-    '📎': 'Paper Clip', '✂️': 'Scissors', '🖍️': 'Crayons', '🎨': 'Art Supplies', '🔬': 'Science Kit'
+    '💧': 'Cracked Clay Pot', '🚰': 'Hand Pump', '🧴': 'Metal Bucket', '🍶': 'Steel Glass', '⛲': 'Water Tank',
+    '📄': 'Torn Notebook', '📖': 'Old Newspaper', '📓': 'New Copy', '📚': 'Borrowed Books', '🎓': 'Report Card',
+    '😢': 'Tears of Fear', '😐': 'Brave Face', '😊': 'First Friend', '💪': 'Standing Up', '👑': 'Class Monitor',
+    '🪑': 'Broken Bench', '🛠️': 'Hammer & Nails', '✨': 'Wooden Desk', '📐': 'Blackboard', '🏛️': 'School Building',
+    '❓': 'Takhti Slate', '✏️': 'Chalk Piece', '🖊️': 'Ink Bottle', '📝': 'Finished Work', '⭐': 'Teacher\'s Star',
+    '👋': 'Wave Hello', '🤝': 'Shared Tiffin', '👥': 'Study Group', '🎉': 'Best Friends', '💖': 'Forever Bond',
+    '🧹': 'Dirty Floor', '🚿': 'Water Bucket', '🧼': 'Soap Piece', '🚽': 'Clean Latrine', '🏥': 'Proper Toilet',
+    '📎': 'Paper Pin', '✂️': 'Old Scissors', '🖍️': 'Worn Crayons', '🎨': 'Art Class', '🔬': 'Teacher\'s Cane'
   };
 
   // Chapter definitions (all 15 chapters)
@@ -213,6 +284,30 @@ const App = () => {
     }
   }, [currentChapter, showStory, showCompletion]);
 
+  // Background ambient sound
+  useEffect(() => {
+    const audio = new Audio('/sounds/school-104993.mp3');
+    audio.loop = true;
+    audio.volume = 0.3;
+
+    // Auto-play with user interaction fallback
+    const playAudio = () => {
+      audio.play().catch(() => {
+        // Auto-play blocked, will retry on first user interaction
+        document.addEventListener('click', () => {
+          audio.play().catch(() => {});
+        }, { once: true });
+      });
+    };
+
+    playAudio();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
   // Energy regeneration
   useEffect(() => {
     const interval = setInterval(() => {
@@ -270,11 +365,11 @@ const App = () => {
         newGrid[index] = randomItem;
         setGrid(newGrid);
         setEnergy(prev => prev - 10);
-        setMessage(`Spawned ${itemNames[randomItem]}`);
-        setTimeout(() => setMessage(''), 2000);
+        // setMessage(`Spawned ${itemNames[randomItem]}`);
+        // setTimeout(() => setMessage(''), 2000);
       } else {
-        setMessage('Not enough energy!');
-        setTimeout(() => setMessage(''), 2000);
+        // setMessage('Not enough energy!');
+        // setTimeout(() => setMessage(''), 2000);
       }
     } else {
       // Cell has item - try to merge
@@ -310,15 +405,15 @@ const App = () => {
               setScore(prev => prev + points);
               setEnergy(prev => Math.min(100, prev + 5));
 
-              setMessage(`Merged! Created ${itemNames[nextItem]} (+${points} points)`);
-              setTimeout(() => setMessage(''), 2000);
+              // setMessage(`Merged! Created ${itemNames[nextItem]} (+${points} points)`);
+              // setTimeout(() => setMessage(''), 2000);
             } else {
-              setMessage('Already at max level!');
-              setTimeout(() => setMessage(''), 2000);
+              // setMessage('Already at max level!');
+              // setTimeout(() => setMessage(''), 2000);
             }
           } else {
-            setMessage('Items must match to merge!');
-            setTimeout(() => setMessage(''), 2000);
+            // setMessage('Items must match to merge!');
+            // setTimeout(() => setMessage(''), 2000);
           }
           setSelectedCell(null);
         }
@@ -398,7 +493,9 @@ const App = () => {
               <ul className="space-y-2">
                 {currentChapterData.objectives.map((obj, idx) => (
                   <li key={idx} className="flex items-center text-gray-600">
-                    <span className="mr-2 text-xl">{obj.item}</span>
+                    <span className="mr-2">
+                      <EmojiIcon emoji={obj.item} size="w-6 h-6" />
+                    </span>
                     <span>{obj.label}</span>
                   </li>
                 ))}
@@ -424,19 +521,21 @@ const App = () => {
         {confetti.map(c => (
           <div
             key={c.id}
-            className="confetti absolute text-4xl"
+            className="confetti absolute"
             style={{
               left: `${c.left}%`,
               animationDelay: `${c.delay}s`
             }}
           >
-            {c.emoji}
+            <EmojiIcon emoji={c.emoji} size="w-12 h-12" />
           </div>
         ))}
 
         <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 relative z-10">
           <div className="text-center">
-            <div className="text-6xl mb-4">🎉</div>
+            <div className="mb-4 flex justify-center">
+              <EmojiIcon emoji="🎉" size="w-20 h-20" />
+            </div>
             <h2 className="text-3xl font-bold text-green-600 mb-4">
               Chapter {currentChapter} Complete!
             </h2>
@@ -472,19 +571,21 @@ const App = () => {
         {confetti.map(c => (
           <div
             key={c.id}
-            className="confetti absolute text-4xl"
+            className="confetti absolute"
             style={{
               left: `${c.left}%`,
               animationDelay: `${c.delay}s`
             }}
           >
-            {c.emoji}
+            <EmojiIcon emoji={c.emoji} size="w-12 h-12" />
           </div>
         ))}
 
         <div className="max-w-3xl w-full bg-white rounded-2xl shadow-2xl p-8 relative z-10">
           <div className="text-center">
-            <div className="text-6xl mb-4">👑</div>
+            <div className="mb-4 flex justify-center">
+              <EmojiIcon emoji="👑" size="w-20 h-20" />
+            </div>
             <h1 className="text-4xl font-bold text-purple-600 mb-4">
               GAME COMPLETE!
             </h1>
@@ -588,15 +689,16 @@ const App = () => {
                   <button
                     key={index}
                     onClick={() => handleCellClick(index)}
-                    className={`aspect-square rounded-lg flex items-center justify-center text-4xl transition-all ${
+                    className={`aspect-square rounded-lg flex items-center justify-center transition-all duration-200 ease-out ${
                       item === null
                         ? 'bg-gray-100 hover:bg-gray-200 border-2 border-dashed border-gray-300'
                         : selectedCell === index
-                        ? 'bg-amber-200 border-4 border-amber-500 scale-95'
-                        : 'bg-gradient-to-br from-white to-gray-50 hover:scale-105 border-2 border-gray-200 shadow-md'
+                        ? 'bg-amber-200 border-4 border-amber-500 scale-95 ring-2 ring-amber-400'
+                        : 'bg-gradient-to-br from-white to-gray-50 hover:scale-105 active:scale-95 border-2 border-gray-200 shadow-md hover:shadow-lg'
                     }`}
+                    style={{ willChange: 'transform' }}
                   >
-                    {item || <Plus className="text-gray-400" size={24} />}
+                    {item ? <EmojiIcon emoji={item} size="w-12 h-12" /> : <Plus className="text-gray-400" size={24} />}
                   </button>
                 ))}
               </div>
@@ -608,7 +710,11 @@ const App = () => {
 
             {/* Little girl character */}
             <div className="text-center">
-              <div className="bounce inline-block text-6xl">👧</div>
+              <img
+                src="/avatars/schoolgirl-leader.svg"
+                alt="Schoolgirl Character"
+                className="bounce inline-block w-24 h-24 mx-auto"
+              />
             </div>
           </div>
 
@@ -631,7 +737,7 @@ const App = () => {
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <span className="text-xl">{obj.item}</span>
+                          <EmojiIcon emoji={obj.item} size="w-6 h-6" />
                           <span className="text-sm text-gray-700">{obj.label}</span>
                         </div>
                         {completed && <span className="text-green-600">✓</span>}
@@ -654,7 +760,7 @@ const App = () => {
                     <div className="flex gap-1">
                       {items.map((item, idx) => (
                         <div key={idx} className="flex items-center">
-                          <span className="text-lg">{item}</span>
+                          <EmojiIcon emoji={item} size="w-5 h-5" />
                           {idx < items.length - 1 && (
                             <span className="text-gray-400 mx-1">→</span>
                           )}

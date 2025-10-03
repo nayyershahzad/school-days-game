@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Metal drinking glass/tumbler -->
+  <ellipse cx="32" cy="54" rx="8" ry="2" fill="#333" opacity="0.2"/>
+  <!-- Glass body -->
+  <path d="M24 25 L22 50 Q22 52 32 52 Q42 52 42 50 L40 25 Z" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="1.5"/>
+  <!-- Rim -->
+  <ellipse cx="32" cy="25" rx="8" ry="2.5" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="1"/>
+  <!-- Dents -->
+  <path d="M27 35 Q28 37 27 39" stroke="#808080" stroke-width="0.8" fill="none"/>
+  <path d="M37 42 Q38 44 37 46" stroke="#808080" stroke-width="0.8" fill="none"/>
+  <!-- Water inside -->
+  <ellipse cx="32" cy="44" rx="7" ry="2" fill="#4682B4" opacity="0.5"/>
+  <path d="M25 30 L24 44 Q24 46 32 46 Q40 46 40 44 L39 30" fill="#87CEEB" opacity="0.4"/>
+  <!-- Scratches -->
+  <line x1="28" y1="32" x2="30" y2="38" stroke="#696969" stroke-width="0.5" opacity="0.4"/>
+  <line x1="35" y1="36" x2="36" y2="42" stroke="#696969" stroke-width="0.5" opacity="0.4"/>
+  <!-- Metallic shine -->
+  <path d="M26 28 Q28 30 26 32" stroke="#E0E0E0" stroke-width="1.5" opacity="0.5"/>
+  <path d="M38 40 Q39 42 38 44" stroke="#E0E0E0" stroke-width="1" opacity="0.4"/>
+</svg>

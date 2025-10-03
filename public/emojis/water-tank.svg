@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Large water tank -->
+  <ellipse cx="32" cy="58" rx="18" ry="4" fill="#333" opacity="0.2"/>
+  <!-- Tank body (cylindrical) -->
+  <rect x="16" y="20" width="32" height="35" fill="#4682B4" stroke="#4169E1" stroke-width="1.5"/>
+  <!-- Top rim -->
+  <ellipse cx="32" cy="20" rx="16" ry="5" fill="#5F9EA0" stroke="#4169E1" stroke-width="1.5"/>
+  <!-- Water level visible -->
+  <ellipse cx="32" cy="45" rx="14" ry="3" fill="#87CEEB" opacity="0.6"/>
+  <!-- Tank cap/lid -->
+  <ellipse cx="32" cy="15" rx="8" ry="3" fill="#A9A9A9" stroke="#808080" stroke-width="1"/>
+  <rect x="28" y="12" width="8" height="4" fill="#A9A9A9" stroke="#808080" stroke-width="1"/>
+  <!-- Rust/wear marks -->
+  <circle cx="20" cy="35" r="2" fill="#CD5C5C" opacity="0.4"/>
+  <circle cx="44" cy="42" r="1.5" fill="#CD5C5C" opacity="0.4"/>
+  <circle cx="28" cy="50" r="1.8" fill="#CD5C5C" opacity="0.3"/>
+  <!-- Water drops/condensation -->
+  <circle cx="25" cy="30" r="0.8" fill="#E0FFFF" opacity="0.6"/>
+  <circle cx="38" cy="38" r="0.6" fill="#E0FFFF" opacity="0.6"/>
+  <!-- Support stand -->
+  <rect x="18" y="55" width="3" height="3" fill="#696969"/>
+  <rect x="43" y="55" width="3" height="3" fill="#696969"/>
+  <!-- Tap at bottom -->
+  <rect x="45" y="50" width="4" height="2" fill="#808080" stroke="#696969" stroke-width="0.5"/>
+  <circle cx="49" cy="51" r="0.8" fill="#696969"/>
+</svg>

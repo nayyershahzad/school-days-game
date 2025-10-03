@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Punishment cane/stick -->
+  <path d="M15 55 L48 12" stroke="#8B4513" stroke-width="3" stroke-linecap="round"/>
+  <!-- Wood texture lines -->
+  <line x1="20" y1="50" x2="22" y2="48" stroke="#654321" stroke-width="0.5" opacity="0.5"/>
+  <line x1="28" y1="42" x2="30" y2="40" stroke="#654321" stroke-width="0.5" opacity="0.5"/>
+  <line x1="36" y1="34" x2="38" y2="32" stroke="#654321" stroke-width="0.5" opacity="0.5"/>
+  <line x1="43" y1="27" x2="45" y2="25" stroke="#654321" stroke-width="0.5" opacity="0.5"/>
+  <!-- Worn grip area -->
+  <path d="M15 55 Q17 53 19 51" stroke="#654321" stroke-width="4" opacity="0.3" stroke-linecap="round"/>
+  <!-- Crack in wood -->
+  <line x1="32" y1="38" x2="33" y2="36" stroke="#4A2511" stroke-width="0.8" opacity="0.6"/>
+  <!-- Shadow -->
+  <path d="M16 56 L49 13" stroke="#000" stroke-width="2.5" opacity="0.15" stroke-linecap="round"/>
+  <!-- Handle wrap -->
+  <ellipse cx="16" cy="54" rx="2.5" ry="1.5" fill="#A0826D" opacity="0.6"/>
+</svg>
