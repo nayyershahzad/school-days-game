@@ -1,5 +1,6 @@
 import { useState, useEffect, memo } from 'react';
 import { Plus, RefreshCw, Sparkles } from 'lucide-react';
+import AdSense from './components/AdSense';
 
 // Emoji image mapping - 90's Sub-continent School Theme (ALL SVG for perfect fit!)
 const emojiImages = {
@@ -552,6 +553,9 @@ const App = () => {
               </div>
             </div>
 
+            {/* Ad placement before next chapter button */}
+            <AdSense adSlot="1234567890" adFormat="auto" />
+
             <button
               onClick={nextChapter}
               className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
@@ -607,6 +611,9 @@ const App = () => {
                 Final Score: {score}
               </div>
             </div>
+
+            {/* Ad placement on final victory screen */}
+            <AdSense adSlot="1234567890" adFormat="auto" />
 
             <div className="flex gap-4">
               <button
@@ -772,6 +779,11 @@ const App = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Ad placement at bottom of main game */}
+        <div className="mt-4">
+          <AdSense adSlot="1234567890" adFormat="horizontal" />
         </div>
       </div>
     </div>
