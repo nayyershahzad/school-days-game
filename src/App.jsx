@@ -554,7 +554,7 @@ const App = () => {
             </div>
 
             {/* Ad placement before next chapter button */}
-            <AdSense adSlot="1234567890" adFormat="auto" />
+            <AdSense adSlot="2205098413" adFormat="auto" />
 
             <button
               onClick={nextChapter}
@@ -613,7 +613,7 @@ const App = () => {
             </div>
 
             {/* Ad placement on final victory screen */}
-            <AdSense adSlot="1234567890" adFormat="auto" />
+            <AdSense adSlot="2205098413" adFormat="auto" />
 
             <div className="flex gap-4">
               <button
@@ -783,7 +783,7 @@ const App = () => {
 
         {/* Ad placement at bottom of main game */}
         <div className="mt-4">
-          <AdSense adSlot="1234567890" adFormat="horizontal" />
+          <AdSense adSlot="2205098413" adFormat="auto" />
         </div>
       </div>
     </div>
